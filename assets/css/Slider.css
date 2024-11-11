@@ -1,0 +1,123 @@
+/* Slider wrapper and container styling */
+.slider {
+    position: relative;
+    overflow: hidden;
+    /* Hide overflow */
+    width: 100%;
+}
+
+.slider-container {
+    border: 2px solid #ddd;
+    border-radius: 28px;
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* .slider-text {
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+} */
+
+@media only screen and (min-width: 768px) {
+    .slider-text {
+        border-top-right-radius: 18px !important;
+        border-bottom-right-radius: 18px !important;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-caption {
+        padding: 10px 10px;
+        bottom: 2rem;
+    }
+}
+
+/* Slide styling */
+.slides {
+    display: flex;
+    transition: transform 0.6s ease;
+    max-width: 100%;
+    /* Dynamic width set by JS */
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    height: 650px;
+    object-fit: fill;
+}
+
+/* Navigation buttons */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+    /* Shadow for depth */
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Darker on hover */
+}
+
+.prev:focus,
+.next:focus {
+    outline: none;
+    /* Remove default focus outline */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .slide img {
+        height: 400px;
+        /* Reduce image height on smaller screens */
+    }
+
+    .prev,
+    .next {
+        font-size: 20px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide img {
+        height: 300px;
+        /* Further reduce image height on very small screens */
+    }
+
+    .prev,
+    .next {
+        font-size: 18px;
+        padding: 6px;
+    }
+}
