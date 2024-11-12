@@ -162,8 +162,12 @@ p {
 .statistic-container {
   padding-top: 120px;
   padding-bottom: 90px;
+  
 }
-
+#Statistic{
+  display: flex;
+  justify-content: center;
+}
 .stats-number {
   font-size: 32px;
   line-height: 36px;
@@ -177,6 +181,7 @@ p {
   max-width: 1140px;
   margin: auto;
   gap: 10px;
+  padding: 0 !important;
   justify-content: center;
 }
 
@@ -348,6 +353,8 @@ p {
 
 .ud-menu-scroll>p {
   color: white;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .color-gray {
@@ -1073,7 +1080,7 @@ p {
 }
 
 .ud-pricing {
-  padding-top: 100px;
+  padding-top: 120px;
   padding-bottom: 90px;
 }
 
@@ -1146,18 +1153,18 @@ p {
   font-weight: 600;
 }
 
-@media (min-width: 1400px) {
-  .pricing-section {
-    display: flex;
-    justify-content: space-between !important;
-    align-items: center;
-  }
-
-  .pricing-section>div {
-    width: max-content;
-  }
+.pricing-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
+.pricing-section>div {
+  width: max-content;
+}
+
+@media (min-width: 1400px) {}
 
 .ud-single-pricing .ud-pricing-header h3 {
   font-weight: 500;
@@ -1167,11 +1174,9 @@ p {
 
 .ud-single-pricing .ud-pricing-header h4 {
   font-weight: 600;
-  font-size: 26px;
+  font-size: 36px;
   color: var(--primary-color);
   margin-bottom: 32px;
-  transform: scaleX(1.1) scaleY(1.3);
-
 }
 
 .ud-single-pricing .ud-pricing-body {
@@ -1254,10 +1259,11 @@ p {
   border: none;
   background: transparent;
   font-weight: 600;
+  padding-left: 10px;
+  min-height: 105px;
   font-size: 18px;
   color: var(--heading-color);
   opacity: 0.88;
-  padding: 30px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px),
@@ -1566,6 +1572,7 @@ p {
   max-width: 705px;
   flex-wrap: wrap;
   margin-bottom: 40px;
+  gap: 15px;
 }
 
 .contact-title-wrapper {

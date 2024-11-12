@@ -6919,7 +6919,36 @@ fieldset:disabled .btn {
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 100% 100%;
-    border-radius: 8px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    cursor: pointer;
+    padding: 7px 3px;
+    width: 40px;
+    height: max-content;
+    margin: auto 0;
+    background-color: #000;
+}
+
+@media (max-width: 767px) {
+    .carousel-control-next,
+    .carousel-control-prev {
+        display: none;
+    }
+    
+}
+
+.carousel-control-next {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.carousel-control-prev {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 .carousel-control-prev-icon {
@@ -6942,14 +6971,22 @@ fieldset:disabled .btn {
     margin-right: 15%;
     margin-bottom: 1rem;
     margin-left: 15%;
-    list-style: none
+    list-style: none;
+    background-color: #00000069;
+    width: max-content;
+    margin: auto;
+    border-radius: 20px;
+    padding: 0px 10px;
+    margin-bottom: 10px;
 }
 
 .carousel-indicators [data-bs-target] {
     box-sizing: content-box;
     flex: 0 1 auto;
-    width: 30px;
-    height: 3px;
+    width: 10px;
+    border-radius: 50%;
+    
+    height: 10px;
     padding: 0;
     margin-right: 3px;
     margin-left: 3px;
@@ -8814,6 +8851,7 @@ fieldset:disabled .btn {
 .d-sm-inline-block {
     display: inline-block !important
 }
+
 @media (min-width:576px) {
     .float-sm-start {
         float: left !important
