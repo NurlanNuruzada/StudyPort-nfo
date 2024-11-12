@@ -1158,6 +1158,7 @@ p {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  padding:0 10px;
 }
 
 .pricing-section>div {
